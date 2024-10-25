@@ -105,7 +105,7 @@ internal constructor(
                     "${isTimeTriggeredResult.second} , ${isSizeTriggeredResult.second}"
             logger.debug { "computed: $debugString" }
 
-            if (isSizeTriggeredResult.first || isTimeTriggeredResult.first) {
+            if (true/*isSizeTriggeredResult.first || isTimeTriggeredResult.first*/) {
                 logger.info { "flushing: $debugString" }
                 latestFlushTimeMsPerStream[stream] = nowProvider.millis()
                 return Optional.of(stream)
