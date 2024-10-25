@@ -70,7 +70,7 @@ internal constructor(
                 bufferDequeue.totalGlobalQueueSizeBytes.toDouble() / bufferDequeue.maxQueueSizeBytes
         // when we are closing or queues are very full, flush regardless of how few items are in the
         // queue.
-        return if (isClosing.get() || isBuffer90Full) 0 else flusher.queueFlushThresholdBytes
+        return 0;//if (isClosing.get() || isBuffer90Full) 0 else flusher.queueFlushThresholdBytes
     }
 
     // todo (cgardens) - improve prioritization by getting a better estimate of how much data
